@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método C.A.R.E - Transforme Cada Conversa em Agendamento</title>
+    <meta name="description" content="Pare de perder clientes no WhatsApp. Método comprovado para esteticistas e micropigmentadoras aumentarem conversões.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <h1 class="hero-title">
+                        Pare de Perder Clientes no WhatsApp e 
+                        <span class="highlight">Transforme Cada Conversa em Agendamento Garantido</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Para esteticistas, micropigmentadoras e donas de clínicas que estão cansadas de ver orçamentos virarem "vou pensar" e nunca mais ter retorno.
+                    </p>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <svg class="benefit-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Scripts prontos para copiar e colar no WhatsApp</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg class="benefit-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Método C.A.R.E que humaniza sem perder eficiência</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg class="benefit-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Técnicas para vender pacotes de alto valor sem parecer "vendedora"</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg class="benefit-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Sistema para reduzir faltas em até 70%</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg class="benefit-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Atendimento padronizado que encanta e fideliza</span>
+                        </div>
+                    </div>
+                    <button class="cta-button" onclick="scrollToCheckout()">
+                        QUERO TRANSFORMAR MEU ATENDIMENTO AGORA
+                    </button>
+                </div>
+                <div class="hero-right">
+                    <div class="ebook-showcase">
+                        <img src="assets/ebook_Metodo_CARE.png" alt="Método C.A.R.E Ebook" class="ebook-mockup">
+                        <div class="badge-comprovado">Método Comprovado</div>
+                        <div class="badge-profissionais">Mais de 500 profissionais já aplicam</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Storytelling Section -->
+    <section class="storytelling" id="storytelling">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-left">
+                    <h2 class="section-title">Você Reconhece Essa Situação?</h2>
+                    <div class="story-text">
+                        <p class="story-highlight">São 22h30 e você ainda está respondendo mensagens no WhatsApp...</p>
+                        <p>Uma cliente pergunta sobre o preço do peeling. Você explica com carinho, manda fotos do antes e depois, dedica 20 minutos da sua noite. A resposta?</p>
+                        <p class="client-response">"Vou pensar e te falo."</p>
+                        <p><strong>E você nunca mais ouve falar dela.</strong></p>
+                        <p>Enquanto isso, sua concorrente está com a agenda lotada...</p>
+                        <p class="story-reveal">Sabe por quê? Ela descobriu o segredo que 97% das profissionais de estética não sabem:</p>
+                        <p class="story-secret">Não é sobre ter o melhor preço. <br><span>É sobre ter o melhor ATENDIMENTO.</span></p>
+                    </div>
+                </div>
+                <div class="story-right">
+                    <div class="pain-illustration">
+                        <img src="assets/estressado.jpg" alt="Profissional estressada com WhatsApp">
+                        <div class="pain-icons">
+                            <div class="pain-icon">
+                                <img src="assets/whats.png" alt="WhatsApp">
+                            </div>
+                            <div class="pain-icon">
+                                <img src="clock-icon.svg" alt="Relógio">
+                            </div>
+                            <div class="pain-icon">
+                                <img src="client-icon.svg" alt="Cliente insatisfeita">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="problems" id="problems">
+        <div class="container">
+            <h2 class="section-title">Se Você Se Identifica Com Pelo Menos 3 Dessas Situações,<br> Este Ebook Foi Feito Para Você:</h2>
+            <div class="problems-grid">
+                <div class="problem-item">
+                    <span class="problem-icon">❌</span>
+                    <p>Passa horas no WhatsApp mas converte poucos orçamentos</p>
+                </div>
+                <div class="problem-item">
+                    <span class="problem-icon">❌</span>
+                    <p>Sente que seus serviços valem mais, mas não consegue comunicar isso no preço</p>
+                </div>
+                <div class="problem-item">
+                    <span class="problem-icon">❌</span>
+                    <p>Tem dificuldade para vender pacotes de tratamentos</p>
+                </div>
+                <div class="problem-item">
+                    <span class="problem-icon">❌</span>
+                    <p>Clientes faltam sem avisar e você perde dinheiro</p>
+                </div>
+                <div class="problem-item">
+                    <span class="problem-icon">❌</span>
+                    <p>Não consegue se desconectar do trabalho, sempre "de plantão"</p>
+                </div>
+                <div class="problem-item">
+                    <span class="problem-icon">❌</span>
+                    <p>Sente que o atendimento está "robótico" mas não sabe como humanizar</p>
+                </div>
+                <div class="problem-item">
+                    <span class="problem-icon">❌</span>
+                    <p>Quer padronizar processos mas tem medo de perder a proximidade</p>
+                </div>
+                <div class="problem-item">
+                    <span class="problem-icon">❌</span>
+                    <p>Concorrentes com preços menores "roubam" suas clientes</p>
+                </div>
+            </div>
+            <div class="problems-cta">
+                <p class="cta-text">Se você marcou SIM para 3 ou mais itens, continue lendo.<br> <strong>Sua vida profissional está prestes a mudar.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution" id="solution">
+        <div class="container">
+            <div class="solution-content">
+                <div class="solution-left">
+                    <h2 class="section-title">Conheça o Método C.A.R.E:<br> <span>A Fórmula Que Está Transformando Clínicas de Estética em Todo o Brasil</span></h2>
+                    <p class="solution-intro">Desenvolvido por Alisson Rosa, especialista em automações e vendas humanizadas, o Método C.A.R.E já ajudou mais de 500 profissionais a:</p>
+                    
+                    <div class="care-method">
+                        <div class="care-item">
+                            <span class="care-letter">C</span>
+                            <div class="care-desc">
+                                <strong>CAPTURAR</strong> a atenção desde o primeiro contato
+                            </div>
+                        </div>
+                        <div class="care-item">
+                            <span class="care-letter">A</span>
+                            <div class="care-desc">
+                                <strong>ACOLHER</strong> com mensagens que geram conexão emocional
+                            </div>
+                        </div>
+                        <div class="care-item">
+                            <span class="care-letter">R</span>
+                            <div class="care-desc">
+                                <strong>RESPONDER</strong> de forma padronizada mas personalizada
+                            </div>
+                        </div>
+                        <div class="care-item">
+                            <span class="care-letter">E</span>
+                            <div class="care-desc">
+                                <strong>ENCANTAR</strong> transformando clientes em fãs da sua clínica
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-highlight">
+                        <p>"Em apenas 30 dias aplicando este método, Amanda (esteticista de São Paulo) aumentou sua conversão de orçamentos em <strong>340%</strong> e reduziu as faltas em <strong>65%</strong>."</p>
+                    </div>
+                </div>
+                <div class="solution-right">
+                    <img src="assets/alisson.png" alt="Alisson Rosa" class="author-photo">
+                    <div class="author-info">
+                        <h3>Alisson Rosa</h3>
+                        <p>Especialista em Automações e Vendas Humanizadas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2 class="section-title">O Que Você Vai Descobrir Neste Ebook:</h2>
+            
+            <div class="chapters-grid">
+                <div class="chapter-card">
+                    <div class="chapter-number">📱</div>
+                    <h3>CAPÍTULO 1: Humanização Sem Complicação</h3>
+                    <ul>
+                        <li>Como acolher clientes desde o primeiro "oi" no WhatsApp</li>
+                        <li>Scripts prontos que você pode copiar e colar hoje mesmo</li>
+                        <li>A técnica do "espelho emocional" que gera conexão instantânea</li>
+                    </ul>
+                </div>
+
+                <div class="chapter-card">
+                    <div class="chapter-number">🧠</div>
+                    <h3>CAPÍTULO 2: Quebrando Crenças Limitantes</h3>
+                    <ul>
+                        <li>Por que "responder na hora" pode estar PREJUDICANDO suas vendas</li>
+                        <li>Como se libertar da escravidão do WhatsApp sem perder clientes</li>
+                        <li>A verdade sobre automação que ninguém te conta</li>
+                    </ul>
+                </div>
+
+                <div class="chapter-card">
+                    <div class="chapter-number">💰</div>
+                    <h3>CAPÍTULO 3: Resolvendo as 5 Dores Mais Comuns</h3>
+                    <ul>
+                        <li>Técnica anti-fantasma: como evitar que clientes "sumam"</li>
+                        <li>Sistema de confirmação que reduz faltas em até 70%</li>
+                        <li>Como transformar "vou pensar" em "quero agendar"</li>
+                    </ul>
+                </div>
+
+                <div class="chapter-card">
+                    <div class="chapter-number">✨</div>
+                    <h3>CAPÍTULO 4: Encantamento e Fidelização</h3>
+                    <ul>
+                        <li>A fórmula do primeiro contato que converte</li>
+                        <li>Scripts de follow-up que geram recorrência</li>
+                        <li>Como criar experiências memoráveis via WhatsApp</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bonus-section">
+                <h3 class="bonus-title">🎯 BÔNUS EXCLUSIVOS:</h3>
+                <div class="bonus-grid">
+                    <div class="bonus-item">
+                        <span class="bonus-icon">📝</span>
+                        <p>50+ Templates de mensagens prontas</p>
+                    </div>
+                    <div class="bonus-item">
+                        <span class="bonus-icon">✅</span>
+                        <p>Checklist de implementação passo a passo</p>
+                    </div>
+                    <div class="bonus-item">
+                        <span class="bonus-icon">💬</span>
+                        <p>Acesso ao grupo VIP no Telegram</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof" id="social-proof">
+        <div class="container">
+            <h2 class="section-title">Veja o Que Profissionais Como Você Estão Falando:</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="assets/pessoa-1.jpg" alt="Carla Mendes" class="testimonial-photo">
+                        <div class="testimonial-info">
+                            <h4>Carla Mendes</h4>
+                            <p>Micropigmentadora - SP</p>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Aplicei o método C.A.R.E há 2 meses e minha agenda nunca mais ficou vazia. Consegui aumentar meu ticket médio em <strong>180%</strong> vendendo mais pacotes!"</p>
+                    <div class="result-badge">+180% Ticket Médio</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="assets/pessoa-2.jpg" alt="Juliana Santos" class="testimonial-photo">
+                        <div class="testimonial-info">
+                            <h4>Juliana Santos</h4>
+                            <p>Esteticista - RJ</p>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Antes eu vivia grudada no celular. Agora tenho horários definidos para atendimento e mesmo assim converto muito mais. Minha qualidade de vida mudou completamente!"</p>
+                    <div class="result-badge">Mais Qualidade de Vida</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="assets/pessoa-3.jpg" alt="Patricia Lima" class="testimonial-photo">
+                        <div class="testimonial-info">
+                            <h4>Patricia Lima</h4>
+                            <p>Dona de Clínica - MG</p>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"O que mais me impressionou foram os scripts. São mensagens que realmente funcionam. Minha taxa de conversão subiu de <strong>15% para 52%</strong>!"</p>
+                    <div class="result-badge">247% Mais Conversão</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Section -->
+    <section class="urgency" id="urgency">
+        <div class="container">
+            <div class="urgency-content">
+                <h2 class="section-title">⚠️ ATENÇÃO: Oferta Por Tempo Limitado!</h2>
+                <p class="urgency-text">Este ebook normalmente custa R$ 97, mas por tempo limitado você pode garantir o seu por apenas:</p>
+                
+                <div class="price-box">
+                    <div class="old-price">R$ 97,00</div>
+                    <div class="new-price">R$ 47,00</div>
+                    <div class="price-info">à vista no PIX (53% OFF)</div>
+                </div>
+
+                <div class="countdown-container">
+                    <p class="countdown-label">⏰ Esta oferta expira em:</p>
+                    <div class="countdown" id="countdown">
+                        <div class="time-box">
+                            <span id="hours">23</span>
+                            <small>horas</small>
+                        </div>
+                        <div class="time-separator">:</div>
+                        <div class="time-box">
+                            <span id="minutes">45</span>
+                            <small>minutos</small>
+                        </div>
+                        <div class="time-separator">:</div>
+                        <div class="time-box">
+                            <span id="seconds">12</span>
+                            <small>segundos</small>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="urgency-reason">Por que este preço especial? Estou lançando minha nova automação com IA e quero que o máximo de profissionais conheça o método C.A.R.E primeiro. É minha forma de retribuir à comunidade que me ajudou a chegar até aqui.</p>
+                <p class="urgency-warning"><strong>Mas atenção:</strong> Após o timer zerar, o ebook volta ao preço normal de R$ 97.</p>
+
+                <button class="cta-button pulse" onclick="scrollToCheckout()">
+                    GARANTIR MEU EBOOK COM 53% OFF
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee" id="guarantee">
+        <div class="container">
+            <div class="guarantee-content">
+                <div class="guarantee-badge">
+                    <img src="guarantee-seal.svg" alt="Garantia" class="guarantee-seal">
+                </div>
+                <div class="guarantee-text">
+                    <h2 class="section-title">Garantia Incondicional de 7 Dias</h2>
+                    <p>Estou tão confiante que o Método C.A.R.E vai transformar seu atendimento que ofereço uma garantia total:</p>
+                    <p class="guarantee-highlight">Se em 7 dias você aplicar as técnicas e não ver melhoria no seu atendimento, devolvemos <strong>100% do seu dinheiro</strong>. Sem perguntas, sem burocracia.</p>
+                    <p class="guarantee-final">Você não tem nada a perder e uma clínica próspera a ganhar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes:</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">❓</span>
+                        <p>"Não tenho tempo para ler ebooks..."</p>
+                    </div>
+                    <div class="faq-answer">
+                        <span class="faq-check">✅</span>
+                        <p>O método C.A.R.E pode ser implementado em apenas 1 hora. São técnicas práticas, não teoria.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">❓</span>
+                        <p>"Já tentei outras coisas e não funcionaram..."</p>
+                    </div>
+                    <div class="faq-answer">
+                        <span class="faq-check">✅</span>
+                        <p>Este método foi testado por mais de 500 profissionais com resultados comprovados. Não é teoria, é prática pura.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">❓</span>
+                        <p>"Meu público é diferente..."</p>
+                    </div>
+                    <div class="faq-answer">
+                        <span class="faq-check">✅</span>
+                        <p>O método funciona para qualquer nicho da estética: facial, corporal, micropigmentação, depilação, etc.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">❓</span>
+                        <p>"E se eu não souber aplicar?"</p>
+                    </div>
+                    <div class="faq-answer">
+                        <span class="faq-check">✅</span>
+                        <p>Além do ebook, você ganha acesso ao grupo VIP onde tiro dúvidas pessoalmente.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">❓</span>
+                        <p>"Automação não vai deixar meu atendimento frio?"</p>
+                    </div>
+                    <div class="faq-answer">
+                        <span class="faq-check">✅</span>
+                        <p>Pelo contrário! O método C.A.R.E humaniza a automação. Suas clientes vão se sentir ainda mais acolhidas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta" id="final-cta">
+        <div class="container">
+            <h2 class="section-title">Sua Decisão Vai Definir os Próximos 12 Meses da Sua Clínica</h2>
+            
+            <div class="decision-grid">
+                <div class="option-card option-bad">
+                    <h3>❌ OPÇÃO 1: Continuar como está</h3>
+                    <ul>
+                        <li>Perdendo clientes para concorrentes</li>
+                        <li>Vivendo grudada no WhatsApp</li>
+                        <li>Convertendo apenas 10-15% dos orçamentos</li>
+                        <li>Tendo faltas constantes na agenda</li>
+                    </ul>
+                </div>
+
+                <div class="option-card option-good">
+                    <h3>✅ OPÇÃO 2: Implementar o Método C.A.R.E</h3>
+                    <ul>
+                        <li>Agenda sempre cheia com clientes qualificadas</li>
+                        <li>Atendimento padronizado que encanta</li>
+                        <li>Conversão de 40-60% dos orçamentos</li>
+                        <li>Mais tempo livre e qualidade de vida</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="final-message">A escolha é sua. Mas lembre-se: <strong>enquanto você pensa, suas concorrentes estão agindo.</strong></p>
+
+            <button class="cta-button final-button" onclick="scrollToCheckout()">
+                QUERO GARANTIR MEU EBOOK AGORA
+            </button>
+            <p class="security-text">🔒 Pagamento 100% seguro via PIX ou cartão</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Sobre Alisson Rosa</h3>
+                    <p>Criador do método C.A.R.E, especialista em automações e vendas humanizadas. Apaixonado por resultados reais, adaptou técnicas de copywriting e marketing para ajudar clínicas de estética a organizar o WhatsApp, cobrar com confiança e transformar cada conversa em agendamento.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Importantes</h3>
+                    <ul>
+                        <li><a href="#privacy">Política de Privacidade</a></li>
+                        <li><a href="#terms">Termos de Uso</a></li>
+                        <li><a href="https://wa.me/5551994408307" target="_blank">WhatsApp: (51) 99440-8307</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Método C.A.R.E - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Checkout Modal (Hidden by default) -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeCheckout()">&times;</button>
+            
+            <div class="modal-header">
+                <h2>🎯 Quase lá!</h2>
+                <p>Preencha seus dados para garantir o Método C.A.R.E</p>
+            </div>
+
+            <form id="checkout-form" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="nome">Nome Completo *</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail *</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">WhatsApp *</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" maxlength="15" pattern="[0-9\(\)\s\-]+" required>
+                </div>
+
+                <div class="checkout-price">
+                    <p>Método C.A.R.E - Ebook Digital</p>
+                    <p class="checkout-value">R$ 47,00</p>
+                    <small style="color: var(--primary-green);">Economia de R$ 50,00</small>
+                </div>
+
+                <button type="submit" class="checkout-button">
+                    FINALIZAR COMPRA
+                </button>
+                
+                <p style="text-align: center; margin-top: 15px; font-size: 0.875rem; color: var(--gray);">
+                    🔒 Seus dados estão seguros e protegidos
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Função simples para abrir modal - definida inline para garantir funcionamento
+        function scrollToCheckout() {
+            console.log('Abrindo modal...');
+            const modal = document.getElementById('checkout-modal');
+            if (modal) {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                console.log('Modal aberto!');
+            } else {
+                console.error('Modal não encontrado!');
+                alert('Erro: Modal não encontrado. Verifique o console.');
+            }
+        }
+        
+        function closeCheckout() {
+            const modal = document.getElementById('checkout-modal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                document.getElementById('checkout-form').reset();
+            }
+        }
+        
+        // Fechar modal clicando fora
+        window.onclick = function(event) {
+            const modal = document.getElementById('checkout-modal');
+            if (event.target === modal) {
+                closeCheckout();
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

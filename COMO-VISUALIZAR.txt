@@ -1,0 +1,51 @@
+========================================
+COMO VISUALIZAR A LANDING PAGE
+========================================
+
+OPÇÃO 1 - ABRIR DIRETAMENTE (MAIS SIMPLES):
+--------------------------------------------
+1. Navegue até a pasta: c:\Users\Aliss\CascadeProjects\eBook-hotmart
+2. Dê duplo clique no arquivo "index.html"
+3. A página abrirá no seu navegador padrão
+
+OPÇÃO 2 - SERVIDOR LOCAL PYTHON:
+---------------------------------
+1. Abra o Prompt de Comando (CMD) ou PowerShell
+2. Navegue até a pasta do projeto:
+   cd c:\Users\Aliss\CascadeProjects\eBook-hotmart
+3. Execute um dos comandos (tente portas diferentes se uma estiver ocupada):
+   python -m http.server 8081
+   python -m http.server 8082
+   python -m http.server 3000
+4. Abra o navegador e acesse a porta que funcionou:
+   http://localhost:8081 (ou 8082, ou 3000)
+
+OPÇÃO 3 - USANDO O VISUAL STUDIO CODE:
+---------------------------------------
+1. Abra a pasta do projeto no VS Code
+2. Instale a extensão "Live Server"
+3. Clique com botão direito no arquivo index.html
+4. Selecione "Open with Live Server"
+
+OPÇÃO 4 - ARQUIVO BATCH (WINDOWS):
+-----------------------------------
+1. Dê duplo clique no arquivo "start-server.bat"
+2. O servidor iniciará automaticamente
+3. Acesse http://localhost:8080 no navegador
+
+========================================
+IMAGENS PLACEHOLDER
+========================================
+Para gerar imagens temporárias:
+1. Abra o arquivo "placeholder-generator.html" no navegador
+2. Clique nos botões para baixar cada imagem placeholder
+3. Salve as imagens na mesma pasta do projeto
+
+========================================
+PERSONALIZAÇÃO
+========================================
+- Textos: Edite o arquivo index.html
+- Cores: Modifique as variáveis no início de styles.css
+- Comportamento: Ajuste o script.js conforme necessário
+
+========================================

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Placeholders</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f3f4f6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #1a1a1a;
+            margin-bottom: 30px;
+        }
+        .placeholder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .placeholder-item {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        canvas {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        button {
+            background: linear-gradient(135deg, #ff6b9d 0%, #2563eb 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .info {
+            background: #fef3c7;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Imagens Placeholder</h1>
+        
+        <div class="info">
+            <p><strong>Instruções:</strong> Clique nos botões para baixar as imagens placeholder. Estas são imagens temporárias para visualizar a landing page enquanto as imagens reais não estão disponíveis.</p>
+        </div>
+
+        <div class="placeholder-grid">
+            <!-- Ebook Mockup -->
+            <div class="placeholder-item">
+                <h3>Ebook Mockup</h3>
+                <canvas id="ebook-mockup" width="400" height="500"></canvas>
+                <button onclick="downloadImage('ebook-mockup', 'ebook-mockup.png')">Baixar Mockup</button>
+            </div>
+
+            <!-- Author Photo -->
+            <div class="placeholder-item">
+                <h3>Foto do Autor</h3>
+                <canvas id="author-photo" width="300" height="300"></canvas>
+                <button onclick="downloadImage('author-photo', 'alisson-rosa.jpg')">Baixar Foto</button>
+            </div>
+
+            <!-- Stressed Professional -->
+            <div class="placeholder-item">
+                <h3>Profissional Estressada</h3>
+                <canvas id="stressed-pro" width="400" height="300"></canvas>
+                <button onclick="downloadImage('stressed-pro', 'stressed-professional.jpg')">Baixar Imagem</button>
+            </div>
+
+            <!-- Testimonial Photos -->
+            <div class="placeholder-item">
+                <h3>Fotos Depoimentos</h3>
+                <canvas id="testimonial1" width="200" height="200"></canvas>
+                <button onclick="downloadImage('testimonial1', 'carla-photo.jpg')">Baixar Carla</button>
+                <br><br>
+                <canvas id="testimonial2" width="200" height="200"></canvas>
+                <button onclick="downloadImage('testimonial2', 'juliana-photo.jpg')">Baixar Juliana</button>
+                <br><br>
+                <canvas id="testimonial3" width="200" height="200"></canvas>
+                <button onclick="downloadImage('testimonial3', 'patricia-photo.jpg')">Baixar Patricia</button>
+            </div>
+
+            <!-- Favicon -->
+            <div class="placeholder-item">
+                <h3>Favicon</h3>
+                <canvas id="favicon" width="64" height="64"></canvas>
+                <button onclick="downloadImage('favicon', 'favicon.png')">Baixar Favicon</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Generate Ebook Mockup
+        function generateEbookMockup() {
+            const canvas = document.getElementById('ebook-mockup');
+            const ctx = canvas.getContext('2d');
+            
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, 400, 500);
+            gradient.addColorStop(0, '#ff6b9d');
+            gradient.addColorStop(1, '#2563eb');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 400, 500);
+            
+            // Book shape
+            ctx.fillStyle = 'white';
+            ctx.fillRect(50, 50, 300, 400);
+            
+            // Book spine
+            ctx.fillStyle = '#e0e0e0';
+            ctx.fillRect(50, 50, 20, 400);
+            
+            // Title
+            ctx.fillStyle = '#1a1a1a';
+            ctx.font = 'bold 32px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('MÉTODO', 200, 150);
+            ctx.fillText('C.A.R.E', 200, 190);
+            
+            ctx.font = '16px Arial';
+            ctx.fillText('Transforme seu', 200, 250);
+            ctx.fillText('WhatsApp em uma', 200, 275);
+            ctx.fillText('Máquina de Vendas', 200, 300);
+            
+            ctx.font = 'bold 14px Arial';
+            ctx.fillText('ALISSON ROSA', 200, 380);
+        }
+
+        // Generate Author Photo
+        function generateAuthorPhoto() {
+            const canvas = document.getElementById('author-photo');
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            ctx.fillStyle = '#f3f4f6';
+            ctx.fillRect(0, 0, 300, 300);
+            
+            // Circle for head
+            ctx.fillStyle = '#ff6b9d';
+            ctx.beginPath();
+            ctx.arc(150, 120, 50, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Body
+            ctx.fillStyle = '#2563eb';
+            ctx.fillRect(100, 170, 100, 130);
+            
+            // Text
+            ctx.fillStyle = '#1a1a1a';
+            ctx.font = '16px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('Alisson Rosa', 150, 250);
+        }
+
+        // Generate Stressed Professional
+        function generateStressedPro() {
+            const canvas = document.getElementById('stressed-pro');
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            const gradient = ctx.createLinearGradient(0, 0, 400, 300);
+            gradient.addColorStop(0, '#fff5f5');
+            gradient.addColorStop(1, '#fef3c7');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 400, 300);
+            
+            // Person silhouette
+            ctx.fillStyle = '#6b7280';
+            ctx.beginPath();
+            ctx.arc(200, 100, 40, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.fillRect(160, 140, 80, 100);
+            
+            // Phone
+            ctx.fillStyle = '#1a1a1a';
+            ctx.fillRect(250, 120, 40, 70);
+            ctx.fillStyle = '#25D366';
+            ctx.fillRect(255, 130, 30, 50);
+            
+            // Stress lines
+            ctx.strokeStyle = '#f97316';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(150, 80);
+            ctx.lineTo(130, 70);
+            ctx.moveTo(250, 80);
+            ctx.lineTo(270, 70);
+            ctx.moveTo(150, 50);
+            ctx.lineTo(140, 30);
+            ctx.stroke();
+        }
+
+        // Generate Testimonial Photos
+        function generateTestimonial(canvasId, name) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            ctx.fillStyle = '#f3f4f6';
+            ctx.fillRect(0, 0, 200, 200);
+            
+            // Circle for photo
+            ctx.fillStyle = '#ff6b9d';
+            ctx.beginPath();
+            ctx.arc(100, 100, 80, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Face placeholder
+            ctx.fillStyle = 'white';
+            ctx.beginPath();
+            ctx.arc(100, 90, 30, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Body
+            ctx.fillStyle = 'white';
+            ctx.beginPath();
+            ctx.arc(100, 160, 50, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Name
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 16px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText(name, 100, 180);
+        }
+
+        // Generate Favicon
+        function generateFavicon() {
+            const canvas = document.getElementById('favicon');
+            const ctx = canvas.getContext('2d');
+            
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, 64, 64);
+            gradient.addColorStop(0, '#ff6b9d');
+            gradient.addColorStop(1, '#2563eb');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 64, 64);
+            
+            // Letter C
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 36px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('C', 32, 45);
+        }
+
+        // Download function
+        function downloadImage(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+
+        // Generate all images on load
+        window.onload = function() {
+            generateEbookMockup();
+            generateAuthorPhoto();
+            generateStressedPro();
+            generateTestimonial('testimonial1', 'Carla');
+            generateTestimonial('testimonial2', 'Juliana');
+            generateTestimonial('testimonial3', 'Patricia');
+            generateFavicon();
+        }
+    </script>
+</body>
+</html>
