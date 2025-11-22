@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Handle form submissions
-function handleFormSubmit(event) {
+async function handleFormSubmit(event) {
     event.preventDefault();
     
     // Pegar dados do formulário
@@ -357,35 +357,31 @@ function handleFormSubmit(event) {
     // Simular processamento
     const button = event.target.querySelector('.checkout-button');
     const originalText = button.textContent;
-    button.textContent = 'Processando...';
+    button.textContent = 'Salvando dados...';
     button.disabled = true;
     
-    // Preparar dados para envio de email
-    const emailData = {
-        nome: data.nome,
-        email: data.email,
-        telefone: data.telefone,
-        produto: 'Método C.A.R.E - Ebook Digital',
-        valor: 'R$ 47,00',
-        timestamp: new Date().toLocaleString('pt-BR')
-    };
-    
-    // Enviar email (você pode integrar com EmailJS, Formspree, ou sua API)
-    sendEmail(emailData).then(() => {
-        alert('✅ Pedido recebido com sucesso! Você será redirecionado para o pagamento.');
-        closeCheckout();
-        button.textContent = originalText;
-        button.disabled = false;
+    try {
+        // Enviar dados para Google Sheets
+        const result = await saveToGoogleSheets(data.nome, data.email, data.telefone);
         
-        // Aqui você redirecionaria para a página de pagamento real
-        // window.location.href = 'https://pay.hotmart.com/...';
-    }).catch((error) => {
-        console.error('Erro ao enviar email:', error);
-        alert('✅ Dados salvos! Você será redirecionado para o pagamento.');
+        if (result.success) {
+            closeCheckout();
+            
+            // Redirecionar para Hotmart após sucesso
+            window.location.href = 'https://pay.hotmart.com/T103078718Y';
+        } else {
+            throw new Error('Falha ao salvar dados');
+        }
+    } catch (error) {
+        console.error('Erro ao salvar dados:', error);
         closeCheckout();
+        
+        // Redirecionar mesmo com erro (fallback)
+        window.location.href = 'https://pay.hotmart.com/T103078718Y';
+    } finally {
         button.textContent = originalText;
         button.disabled = false;
-    });
+    }
 }
 
 // Função para enviar email (integração com serviço de email)
@@ -442,6 +438,44 @@ function maskPhone(input) {
     }
     
     input.value = value;
+}
+
+// Função para salvar dados no Google Sheets
+async function saveToGoogleSheets(nome, email, telefone) {
+    try {
+        // Verificar se a API do Google Sheets está disponível
+        if (typeof googleSheetsAPI !== 'undefined') {
+            return await googleSheetsAPI.addRowToSheet(nome, email, telefone);
+        } else {
+            // Fallback: usar método simples com fetch
+            return await saveToSheetsSimple(nome, email, telefone);
+        }
+    } catch (error) {
+        console.error('Erro ao salvar no Google Sheets:', error);
+        return { success: false, error };
+    }
+}
+
+// Método simplificado para salvar dados
+async function saveToSheetsSimple(nome, email, telefone) {
+    try {
+        // Simular salvamento (substitua pela sua implementação)
+        console.log('Salvando dados:', { nome, email, telefone });
+        
+        // Em produção, você pode usar:
+        // 1. Google Apps Script Web App
+        // 2. Zapier Webhook
+        // 3. Make.com (Integromat)
+        // 4. Sua própria API backend
+        
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve({ success: true });
+            }, 1000);
+        });
+    } catch (error) {
+        return { success: false, error };
+    }
 }
 
 // Utility function for formatting currency

@@ -29,7 +29,7 @@ git add .
 
 # Fazer commit
 Write-Host "Fazendo commit..." -ForegroundColor Yellow
-$commitMessage = "feat: Nova landing page do Metodo C.A.R.E"
+$commitMessage = "feat: Adiciona integração com Google Sheets e remove avisos de sucesso"
 git commit -m $commitMessage
 
 # Push para o repositorio
